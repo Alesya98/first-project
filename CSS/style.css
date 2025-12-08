@@ -3,13 +3,15 @@
   margin: 0;
   padding: 0;
 }
-body {
-   max-width: 1160px;
-   padding: 64px 340px;
+
+.section {
+    margin-top: 64px;
+    margin-bottom: 64px;
 }
 
  .card {
     max-width: 480px;
+    margin: 0 auto;
     text-align: center;
     padding: 40px 28px;
     background-color: #FAF2E6;
@@ -28,6 +30,7 @@ body {
 }
 
 .allow {
+    white-space: pre-line;
     margin-bottom: 12px;
     font-size: 36px;
     line-height: 108%;
@@ -44,7 +47,8 @@ body {
 
 .button {
     padding: 12px 16px;
-    outline: nine;
+    cursor: pointer;
+    outline: none;
     border-radius: 6px;
     background-color: #205529;
     font-size: 14px;
