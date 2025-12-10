@@ -1,15 +1,22 @@
-.container {
-    max-width: 1920px;
-    padding: 200px 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.section__card {
-    flex: 1;
-    max-width: 288px;
+.cards {
+    margin: 200px 0;
+}
+
+.container {
+    max-width: 1470px;
+    padding: 0 15px;
+    display: flex;
+}
+
+.card {
+    flex: 1 0 288;
     padding: 30px 50px;
-    outline: 1px solid #EBEBF0;
+    border: 1px solid #EBEBF0;
 } 
 
