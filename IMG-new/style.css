@@ -1,0 +1,66 @@
+@import url('https://fonts.google.com/specimen/Inter+Tight');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter Tight', sans-serif;
+    color: #000704;
+}
+
+section {
+    padding: 130px 150px;
+}
+
+.cards-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+.card__img {
+    display: block;
+    position: relative;
+}
+
+.card__links {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 24px;
+    right: 28px;
+}
+
+.card__link {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+}
+
+.card__name {
+    padding: 20px 0;
+    outline: none;
+    border-bottom: 2px solid #00AC6D;
+}
+
+.card__title {
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 110%;
+}
+
+.card__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #7F8381;
+}
+
