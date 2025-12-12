@@ -1,0 +1,239 @@
+@import url('https://fonts.google.com/specimen/Inter');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    padding: 50px;
+    
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px;
+    background-color: rgb(233, 221, 213);
+    border-radius: 30px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+
+.button__submit {
+    cursor: pointer;
+    outline: none;
+    padding: 24px;
+    background-color: #FF6636;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 48px;
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.button__submit:hover {
+    background-color: #CC522B;
+    box-shadow: 6px 6px 24px rgba(204, 82, 43, 0.5);
+}
+
+.button__submit:active {
+    transform: scale(1);
+    background-color: #b6451f;
+}
+
+.button__submit:focus {
+    outline: 2px solid #5a1c08;
+    outline-offset: 2px;
+}
+
+.button_receive {
+    cursor: pointer;
+    outline: none;
+    padding: 24px;
+    background-color: #564FFD;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.button_receive:hover {
+    background-color: #453FCA;
+    box-shadow: 6px 6px 20px rgba(69, 63, 202, 0.5);
+}
+
+.button_receive:active {
+    transform: scale(1);
+    background-color: #211c8a;
+}
+
+.button_receive:focus {
+    outline: 2px solid #242164;
+    outline-offset: 2px;
+}
+
+.link {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link__menu {
+    position: relative;
+    width: 72px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(35, 189, 51, 1);
+    transition: all 0.3s ease-in-out;
+}
+
+.link__menu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: rgba(35, 189, 51, 1);
+    transition: width 0.3s ease-in-out;
+}
+
+.link__menu:hover::after {
+    width: 100%;;
+}
+
+.link__menu:active svg {
+    transform: translateX(2px);
+}
+
+.link__menu:focus {
+    outline: none;
+    background-color: aquamarine;
+}
+
+.link__contact {
+    position: relative;
+    width: 72px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(227, 68, 68, 1);
+    transition: all 0.3s ease-in-out;
+}
+
+.link__contact::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: rgba(227, 68, 68, 1);
+    transition: width 0.3s ease-in-out;
+}
+
+.link__contact:hover::after {
+    width: 100%;
+}
+
+.link__contact:active svg {
+    transform: translateX(2px) rotate(180deg);
+}
+
+.link__contact:focus {
+    outline: none;
+    background-color: rgb(220, 144, 159);
+}
+
+.form {
+    margin-bottom: 25px;
+}
+
+.form__input {
+    max-width: 312px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+    border: 1px solid rgba(233, 234, 240, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(140, 148, 163, 1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.form__input:hover {
+    border: 3px solid rgba(255, 221, 209, 1);
+}
+
+.form__input:active {
+    border: 1px solid rgba(255, 102, 54, 1);
+}
+
+.form__input:focus {
+    outline: none;
+    border: 1px solid rgba(255, 102, 54, 1);
+}
+
+.list__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    margin-bottom: 12px;
+    color: rgba(29, 32, 38, 1);
+}
+
+.list__item {
+    max-width: 312px;
+    margin-bottom: 12px;
+    color: rgba(78, 85, 102, 1);
+    padding: 5px 0;
+    padding-left: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.list__item:hover {
+    background-color: rgba(255, 238, 232, 1);
+}
+
+.list__item:active {
+    background-color: rgb(222, 192, 182);
+    transform: scale(0.98);
+}
+
+.list__item:focus {
+    outline: none;
+    border: 1px solid rgb(146, 72, 46);
+}
+
