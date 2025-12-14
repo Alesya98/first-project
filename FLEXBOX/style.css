@@ -10,12 +10,13 @@
 
 .container {
     max-width: 1470px;
+    margin: 0 auto;
     padding: 0 15px;
     display: flex;
 }
 
 .card {
-    flex: 1 0 288;
+    flex: 1 0 288px;
     padding: 30px 50px;
     border: 1px solid #EBEBF0;
 } 
