@@ -81,16 +81,9 @@ body {
 }
 
 .plan__title_premium {
-    margin-bottom: 12px;
     color: #070707;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 40px;
 }
 
 .plan__text_premium {
     color: #070707;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
 }
