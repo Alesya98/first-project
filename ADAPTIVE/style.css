@@ -67,6 +67,7 @@ body {
     cursor: pointer;
     white-space: nowrap;
     outline: none;
+    border: none;
 } 
 
 @media (min-width: 1280px) {
@@ -76,20 +77,15 @@ body {
 }
 
 .container {
-    padding: 0 80px;
+    max-width: 1310px;
 }
 
 .products__container {
     flex-direction: row;
     justify-content: space-between;
     gap: 150px;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    padding-left: 80px;
-    padding-right: 120px;
+    padding: 80px 120px 80px 80px;
     background-image: url(img/vector-laptop.png);
-    background-repeat: no-repeat;
-    background-position: top right;
 }
 
 .products__info {
@@ -98,8 +94,8 @@ body {
 
 .products__btn {
     max-width: 126px;
-    padding: 20px 14px;
-    height: 49px;
+    padding: 14px;  
+}
 }
 
 @media (min-width: 1584px) {
@@ -108,7 +104,7 @@ body {
 }
 
     .container {
-    padding: 0 168px;
+    max-width: 1614px;
 }
 
     .products__container{
@@ -117,5 +113,8 @@ body {
     padding-left: 80px;
     padding-right: 142px;
     }
-}
+
+    .products__info {
+    max-width: 1033px;
+    }
 }
