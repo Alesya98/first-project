@@ -1,0 +1,91 @@
+$breakpoints: (
+  'mobile': 375px,
+  'tablet': 834px,
+  'desktop': 1750px
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+.card {
+    .card__container {
+        width: 100%;
+    
+
+    @include respond-to('tablet') {
+        max-width: 834px;
+        padding: 54px 71px;
+
+    }
+
+    @include respond-to('desktop') {
+        max-width: 1750px;
+    }
+}
+
+    .card__content {  
+    @include respond-to('tablet') {
+        max-width: 692px;
+        width: 100%;
+        text-align: center;  
+        }
+
+    @include respond-to('desktop') {
+        max-width: 1058px;
+
+    }
+        
+}
+
+    .card__title {
+    @include respond-to('tablet') {
+        font-size: 48px;
+        line-height: 48px;
+        }
+
+    @include respond-to('desktop') {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    }
+
+    .card__text {
+    @include respond-to('tablet') {
+        font-size: 18px;
+        line-height: 28px;
+        }
+
+    @include respond-to('desktop') {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    }
+
+    .card__form {
+    @include respond-to('tablet') {
+        max-width: 653px; 
+        }
+    }
+
+    .card__form_input {
+    @include respond-to('tablet') {
+        max-width: 572px;
+        line-height: 24px;
+        }
+    }
+
+    .card__form_btn {
+    @include respond-to('tablet') {
+        max-width: 126px;
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 28px;
+        }
+    }
+}
