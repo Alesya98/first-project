@@ -1,0 +1,813 @@
+@import url('https://fonts.google.com/specimen/Alexandria');
+
+$green: rgba(157, 255, 58, 1);
+$title: rgba(229, 229, 229, 1);
+$text: rgba(153, 153, 153, 1);
+$body: rgba(0, 0, 0, 1);
+$section: rgba(15, 15, 15, 1);
+
+@mixin font($font-size, $line-height, $font-weight) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $body;
+    font-family: 'Alexandria', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 120px;
+    margin: 0 auto;
+
+    @media (max-width: 402px) {
+        max-width: 402px;
+        padding: 0 20px;
+  }
+}
+
+.subtitle {
+    border: 1px solid #4D4D4D;
+    border-radius: 24px;
+    color: $green;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+
+    @include font(14px, 100%, 400);
+
+    @media (max-width: 402px) {
+       margin-bottom: 16px;
+  }
+}
+
+.title {
+   
+    color: $title;
+      margin-bottom: 20px;
+       @include font(48px, 100%, 400);
+
+    @media (max-width: 402px) {
+       margin-bottom: 16px;
+       @include font(28px, 100%, 400);
+  }
+}
+
+.text {
+
+    max-width: 644px;
+        display: inline-block;
+        margin-bottom: 72px;
+       @include font(18px, 140%, 400);
+    margin-bottom: 32px;
+    color: $text;
+
+    @include font(16px, 140%, 400);
+
+    @media (max-width: 402px) {
+        margin-bottom: 32px;
+        color: $text;
+
+    @include font(16px, 140%, 400);
+  }
+}
+
+.header {
+    padding: 24px 0;
+    
+ .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } 
+
+     @media (max-width: 402px) {
+        padding: 20px;
+        max-width: 100%;
+  }
+
+    .nav {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 40px;
+
+       &__link {
+        color: $text;
+        cursor: pointer;
+        transition: all 0.3 ease-in-out;
+
+        @include font(16px, 100%, 400);
+
+        &:hover{
+            color: rgba(229, 229, 229, 1);
+        }
+    
+        @media (max-width: 925px) {
+            display: none;
+        }
+  }
+    }
+
+    &__btn {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            &_login {
+                padding: 10px 24px;
+                color: rgba(255, 255, 255, 1);
+                transition: background-color 0.3 ease-in-out;
+
+                @include font(16px, 100%, 400);
+
+                &:hover{
+                    background-color: rgba(179, 179, 179, 0.3);
+                }
+            }
+
+            &_free {
+                padding: 10px 24px;
+                background-color: $green;
+                border-radius: 40px;
+                color: $body;
+                transition: background-color 0.3 ease-in-out;
+
+                @include font(16px, 100%, 400);
+
+                &:hover{
+                    background-color: rgb(167, 227, 107);
+                }
+            }
+
+            @media (max-width: 925px) {
+                display: none;
+            }
+    }
+
+    &__open-mobile {
+        display: none;
+     @media (max-width: 925px) {
+        display: block;
+    }   
+    }
+    
+}
+
+.page {
+    padding: 88px 0;
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    
+
+    @media (max-width: 900px) {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+
+    &__img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .subtitle {
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 402px) {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+    &__info {
+        margin: 0;
+        padding: 69.5px 0;
+        max-width: 688px;
+        width: 100%;
+        
+        @media (max-width: 402px) {
+        margin-bottom: 32px;
+        padding: 0;
+  }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        @include font(64px, 110%, 700);
+        color: $title;
+
+        @media (max-width: 402px) {
+        margin-bottom: 16px; 
+        @include font(40px, 110%, 500);
+  }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        max-width: 583px;
+        @include font(20px, 140%, 400);
+        color: $text;
+
+        @media (max-width: 402px) {
+        margin-bottom: 32px;
+        @include font(16, 100%, 400);
+
+  }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width: 402px) {
+        flex-direction: column;
+  }
+    }
+
+    &__links_start {
+        background-color: $green;
+        border-radius: 40px;
+        padding: 14px 24px;
+        color: $body;
+        transition: background-color 0.3s ease-in-out; 
+        
+        @include font(18px, 100%, 400);
+
+        @media (max-width: 1440px) {
+            @include font(16px, 100%, 400);
+  }
+
+        &:hover {
+            background-color: rgb(167, 227, 107);
+        }
+    }
+
+    &__links_watch {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border: 1.5px solid #B3B3B3;
+        border-radius: 40px;
+        padding: 14px 24px;
+        color: $title;
+        transition: background-color 0.3s ease-in-out; 
+        
+        @include font(18px, 100%, 400);
+    
+        @media (max-width: 1440px) {
+            padding: 16px 24px;
+            @include font(16px, 100%, 400);       
+       
+  }
+        &:hover{
+            background-color: rgba(179, 179, 179, 0.3);
+        }
+    }
+}
+
+.partners {
+    background-color: $section;
+
+    .container {
+        padding: 40px 36px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        color: $text;
+        text-align: center;
+
+        @include font(16px, 100%, 400);
+
+            @media (max-width: 402px) {
+                margin-bottom: 32px;
+    }
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 72px;
+
+            @media (max-width: 1440px) {
+                gap: 20px 16px;
+  }
+    }
+
+}
+
+.features {
+    text-align: center;
+    padding: 80px 0;
+
+        @media (max-width: 402px) {
+        padding: 40px 0;
+  }
+    
+
+    &__text {
+        line-height: 140%;
+
+            @media (max-width: 402px) {
+                line-height: 100%;
+  }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        max-width: 1200px;
+        align-items: center;
+        flex-wrap: wrap;
+        
+
+        @media (max-width: 402px) {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    .card {
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 12px;
+        flex: 1 0 384px;
+        padding: 36px 48px;
+        background: linear-gradient(rgba(77, 77, 77, 0.1), rgba(179, 179, 179, 0.1));
+
+        @media (max-width: 402px) {
+            padding: 30px 24px;
+            flex: auto;
+        }
+
+        &__title {
+            margin-bottom: 16px;
+            color: $title;
+
+            @include font(20px, 140%, 400);
+        }
+
+        &__text {
+            color: $text;
+
+            @include font(16px, 100%, 400)
+        }
+    }
+
+    .card svg {
+        margin-bottom: 36px;
+    }
+}
+
+.statistics {
+    padding: 120px 0;
+    text-align: center;
+    background-color: $section;
+
+    @media (max-width: 402px) {
+        padding: 40px 0;
+    }
+
+    &__text {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 80px;
+        
+
+        @media (max-width: 402px) {
+            font-size: 14px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 72px;
+
+        @media (max-width: 402px){
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    .info {
+        &__text{
+        color: $green;
+        margin-bottom: 12px;
+
+        @include font(48px, 100%, 400); 
+        }
+
+        &__subtext {
+            color: $text;
+
+            @include font(20px, 140%, 400);
+        }
+        
+    }
+}
+
+.fuature {
+    padding: 60px 0;
+    text-align: center;  
+
+    @media (max-width: 402px) {
+        padding: 40px 0;
+    }
+
+    &__text {
+            margin-bottom: 80px;
+
+            @media (max-width: 402px) {
+                margin-bottom: 32px;
+            }
+        }
+
+        &__cards {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 72px;
+
+            @media (max-width: 900px) {
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 32px;
+            }
+        }
+
+    &__cards_img {
+            margin: 0;
+            object-fit: contain;
+            max-width: 506px;
+            width: 100%;
+
+        @media (max-width: 402px) {
+            max-width: 300px;
+            width: 100%;
+        }
+    }
+
+    &__wrap {
+        display: grid;
+        gap: 40px;
+
+        @media (max-width: 402px) {
+            gap: 16px;
+        }
+    }
+
+    &__card {
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 20px;
+        padding: 24px 20px;
+        background: linear-gradient(rgba(77, 77, 77, 0.1), rgba(179, 179, 179, 0.1));
+        text-align: left;
+
+        @media (max-width: 1440px) {
+            padding: 30px 20px;
+        }
+    }
+
+    &__card svg {
+        position: absolute;
+    }
+
+    &__info {
+        padding-left: 50px;
+
+        &_title {
+            margin-bottom: 8px;
+            color: $title;
+
+            @include font(20px, 140%, 400);
+
+            @media (max-width: 1440px) {
+            color: rgba(229, 229, 229, 1);
+        }
+        }
+
+        &_text {
+            color: $text;
+
+            @include font(14px, 100%, 400);
+        }
+    }
+}
+
+.testimonial {
+    padding: 80px 0 149px 0;
+    text-align: center;
+    background-color: $section;
+
+    @media (max-width: 402px) {
+            padding: 40px;
+    }
+
+    // .container {
+    //         padding: 0;
+    //     }
+
+    .swiper {
+        width: 100%;
+        height: 196px;
+        overflow: visible;
+
+
+        .swiper-slide {
+            background-color: $body;
+            border-radius: 16px;
+            border: 1px solid rgba(179, 179, 179, 0.3);
+            padding: 32px;
+        }
+
+        &__text {
+        margin-bottom: 24px;
+        color: rgba(237, 237, 242, 1);
+        text-align: left;
+
+        @include font(16px, 100%, 400);
+        }
+
+        &__content {
+            text-align: left;
+            display: flex;
+            gap: 17px;
+            align-items: center;
+
+        .name {
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: 6px;
+
+            @include font(14px, 100%, 400);
+        }
+
+        .quote {
+            color: rgba(77, 77, 77, 1);
+            
+            @include font(12px, 100%, 400);
+        }
+    }
+    }
+}
+
+.faq {
+    padding: 80px 0;
+    text-align: center;
+
+     @media (max-width: 402px) {
+        padding: 40px 0;
+     }
+
+.accordoin {
+    max-width: 792px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    @media (max-width: 402px) {
+        gap: 16px;
+    }
+}
+
+    .accordion-item {
+        width: 100%;
+        border: 1px solid rgba(46, 46, 46, 1);
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .accordion-title {
+        color: $title;
+        text-align: left;
+        
+        @include font(16px, 100%, 400)
+    }
+}
+
+.revolutionary {
+    padding: 80px 0;
+    text-align: center;
+    background-color: $section;
+
+    @media (max-width: 402px) {
+        padding: 40px 0;
+    }
+    .container {
+        max-width: 878px;
+        // padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        @media (max-width: 402px) {
+            @include font(28px, 100%, 400)
+        }
+    }
+
+    &__text {
+        @media (max-width: 402px) {
+            @include font(16px, 140%, 400)
+        }
+    }
+
+
+
+
+    &__link {
+        display: inline-block;
+        background-color: $green;
+        padding: 14px 24px;
+        color: $body;
+        transition: background-color 0.3s ease-in-out; 
+
+        @include font(18px, 100%, 400);
+
+        &:hover {
+            background-color: rgb(167, 227, 107);
+        }        
+    }
+}
+
+.footer {
+    padding-top: 80px;
+
+    @media (max-width: 402px) {
+        padding-top: 40px;
+    }
+
+    &__wrap {
+        margin-bottom: 40px;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 402px) {
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 92px;
+
+        @media (max-width: 402px) {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        &__list {
+            color: $title;
+            text-align: left;
+
+            @include font(20px, 140%, 400);
+
+            @media (max-width: 402px) {
+                margin-bottom: 12px;
+                text-align: center;
+            }
+        }
+
+        &__item {
+            text-align: left;
+
+            @media (max-width: 402px) {
+            text-align: center;
+            }
+
+            &_link {
+            color: $text; 
+            position: relative;
+            transition: all 0.3s ease-in-out;
+
+            @include font(14px, 100%, 400);
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                transition: all 0.3s ease-in-out;
+                
+            }
+
+            &:hover::after{
+                width: 100%;
+            }
+            }
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    .form {
+            padding-bottom: 16px;
+            position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            opacity: 0.35;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        &__title {
+            color: rgba(216, 216, 216, 1);
+            margin-bottom: 20px;
+
+            @include font(20px, 140%, 400);
+        }
+
+        &__wrap {
+            display: flex;
+            max-width: 100%;
+        }
+
+        &__input {
+            width: 100%;
+            padding: 11.5px 0;
+            color: $text;
+            background-color: transparent;
+            border: none;
+            outline: none;
+
+            @include font(14px, 100%, 400);
+        }
+
+        &__btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: $green;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+            background-color: rgb(167, 227, 107);
+        } 
+        }
+    }
+
+    &__bottom {
+        padding: 40px 0;
+        text-align: center;
+        @media (max-width: 402px) {
+            padding: 20px 0;
+        }
+    }
+
+    .bottom-text {
+        color: rgba(153, 153, 153, 1);
+
+        @include font(12px, 100%, 400)
+    }
+}
