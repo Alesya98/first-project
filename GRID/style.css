@@ -1,0 +1,100 @@
+@import url('https://fonts.google.com/specimen/Roboto');
+@import url('https://fonts.google.com/specimen/Inter+Tight');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 1920px;
+}
+
+.container {
+    max-width: 1377px;
+    padding-top: 404px;
+    padding-bottom: 405px;
+    margin: 32px auto;
+    background-color: #070707;
+    border-radius: 12px;
+     color: #FFFFFF;
+}
+
+.page {
+    max-width: 639px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.page__title {
+    margin-bottom: 14px;
+    white-space: pre-line;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.page__text {
+    white-space: pre-line;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.service-card {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.card-one,
+.card-two {
+    background-color: #FFFFFF38;
+    border: 1px solid White;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card-one__title,
+.card-two__title {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.card-one__text,
+.card-two__text {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.card-three{
+    grid-column: 1/3;
+    background-color: #F5AA21;
+    border: 1px solid White;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card-three__title {
+    margin-bottom: 12px;
+    color: #070707;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.card-three__text {
+    color: #070707;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}

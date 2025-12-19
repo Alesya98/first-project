@@ -1,0 +1,15 @@
+.container {
+    max-width: 1920px;
+    padding: 200px 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section__card {
+    flex: 1;
+    max-width: 288px;
+    padding: 30px 50px;
+    outline: 1px solid #EBEBF0;
+} 
+
