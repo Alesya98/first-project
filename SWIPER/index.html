@@ -10,52 +10,52 @@
 <body>
     <section class="section-swiper">
   <!-- Swiper -->
-  <div class="swiper mySwiper">
+  <div class="swiper my-swiper">
     <div class="swiper-wrapper"> 
         <div class="swiper-slide">
-        <img src="img/plant.png" alt="растение" loading="lazy">
-        <div class="swiper-slide__content">
-            <h3 class="swiper-slide__title">We Have Small And Best O2 Plants Collection’s</h3>
-            <p class="swiper-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        <img class="my-swiper__image" src="img/plant.png" alt="растение" loading="lazy">
+        <div class="my-swiper__content">
+            <h3 class="my-swiper__title">We Have Small And Best O2 Plants Collection’s</h3>
+            <p class="my-swiper__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p class="swiper-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            <p class="my-swiper__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <button class="swiper-slide__btn">Explore</button>
+                <button class="my-swiper__btn">Explore</button>
                     
                 
         </div>
         </div>
     <div class="swiper-slide">
-       <img src="img/plant.png" alt="растение" loading="lazy">
-        <div class="swiper-slide__content">
-            <h3 class="swiper-slide__title">We Have Small And Best O2 Plants Collection’s</h3>
-            <p class="swiper-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+       <img  class="my-swiper__image" src="img/plant.png" alt="растение" loading="lazy">
+        <div class="my-swiper__content">
+            <h3 class="my-swiper__title">We Have Small And Best O2 Plants Collection’s</h3>
+            <p class="my-swiper__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p class="swiper-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            <p class="my-swiper__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <button class="swiper-slide__btn">Explore</button>
+                <button class="my-swiper__btn">Explore</button>
         </div>
     </div>
     <div class="swiper-slide">
-       <img src="img/plant.png" alt="растение" loading="lazy">
-        <div class="swiper-slide__content">
-            <h3 class="swiper-slide__title">We Have Small And Best O2 Plants Collection’s</h3>
-            <p class="swiper-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+       <img class="my-swiper__image" src="img/plant.png" alt="растение" loading="lazy">
+        <div class="my-swiper__content">
+            <h3 class="my-swiper__title">We Have Small And Best O2 Plants Collection’s</h3>
+            <p class="my-swiper__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p class="swiper-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            <p class="my-swiper__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <button class="swiper-slide__btn">Explore</button>
+                <button class="my-swiper__btn">Explore</button>
         </div>
     </div>
      <div class="swiper-slide">
-       <img src="img/plant.png" alt="растение" loading="lazy">
-        <div class="swiper-slide__content">
-            <h3 class="swiper-slide__title">We Have Small And Best O2 Plants Collection’s</h3>
-            <p class="swiper-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+       <img class="my-swiper__image" src="img/plant.png" alt="растение" loading="lazy">
+        <div class="my-swiper__content">
+            <h3 class="my-swiper__title">We Have Small And Best O2 Plants Collection’s</h3>
+            <p class="my-swiper__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p class="swiper-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            <p class="my-swiper__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <button class="swiper-slide__btn">Explore</button>
+                <button class="my-swiper__btn">Explore</button>
         </div>
     </div>
        
@@ -68,7 +68,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".my-swiper", {
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
       },
@@ -76,7 +77,6 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       }
-     
     });
   </script>
 </body>
