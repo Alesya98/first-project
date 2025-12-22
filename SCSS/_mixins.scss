@@ -1,0 +1,58 @@
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'desktop': 1024px
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+.hero {
+    .hero__container {
+        max-width: 100%;
+
+        @include respond-to('tablet') {
+            max-width: 750px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        @include respond-to('desktop') {
+            max-width: 1024px;
+        }
+    }
+
+    .hero__cards {
+        @include respond-to('tablet') {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .card:not(:last-child) {
+        @include respond-to('tablet') {
+            margin-bottom: 0px;
+        }
+}
+
+    .hero__text{
+        @include respond-to('tablet') {
+            max-width: 100%;
+        }
+    }
+
+    .hero__btn {
+        @include respond-to('tablet') {
+            max-width: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
