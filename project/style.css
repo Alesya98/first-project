@@ -23,7 +23,7 @@ a {
   padding: 0 120px;
   margin: 0 auto;
 }
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .container {
     max-width: 402px;
     padding: 0 20px;
@@ -54,7 +54,7 @@ a {
   line-height: 100%;
   font-weight: 400;
 }
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .title {
     margin-bottom: 16px;
     font-size: 28px;
@@ -209,7 +209,7 @@ a {
   font-weight: 700;
   color: rgb(229, 229, 229);
 }
-@media (max-width: 402px) {
+@media (max-width: 717px) {
   .page__title {
     margin-bottom: 16px;
     font-size: 40px;
@@ -324,7 +324,7 @@ a {
   text-align: center;
   padding: 80px 0;
 }
-@media (max-width: 402px) {
+@media (max-width: 604px) {
   .features {
     padding: 40px 0;
   }
@@ -332,7 +332,7 @@ a {
 .features__text {
   line-height: 140%;
 }
-@media (max-width: 402px) {
+@media (max-width: 604px) {
   .features__text {
     line-height: 100%;
   }
@@ -354,11 +354,11 @@ a {
 .features .card {
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 12px;
-  flex: 1 0 384px;
+  flex: 1 1 384px;
   padding: 36px 48px;
   background: linear-gradient(rgba(77, 77, 77, 0.1), rgba(179, 179, 179, 0.1));
 }
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .features .card {
     padding: 30px 24px;
     flex: auto;
@@ -408,7 +408,7 @@ a {
   justify-content: center;
   gap: 72px;
 }
-@media (max-width: 402px) {
+@media (max-width: 717px) {
   .statistics__info {
     flex-direction: column;
     gap: 24px;
@@ -667,7 +667,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .footer__wrap {
     flex-direction: column;
     gap: 40px;
@@ -679,7 +679,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 92px;
 }
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .footer .nav {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -692,7 +692,7 @@ a {
   line-height: 140%;
   font-weight: 400;
 }
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .footer .nav__list {
     margin-bottom: 12px;
     text-align: center;
@@ -701,7 +701,7 @@ a {
 .footer .nav__item {
   text-align: left;
 }
-@media (max-width: 402px) {
+@media (max-width: 600px) {
   .footer .nav__item {
     text-align: center;
   }

@@ -36,7 +36,7 @@ a {
     padding: 0 120px;
     margin: 0 auto;
 
-    @media (max-width: 402px) {
+    @media (max-width: 600px) {
         max-width: 402px;
         padding: 0 20px;
   }
@@ -63,7 +63,7 @@ a {
       margin-bottom: 20px;
        @include font(48px, 100%, 400);
 
-    @media (max-width: 402px) {
+    @media (max-width: 600px) {
        margin-bottom: 16px;
        @include font(28px, 100%, 400);
   }
@@ -214,7 +214,7 @@ a {
         @include font(64px, 110%, 700);
         color: $title;
 
-        @media (max-width: 402px) {
+        @media (max-width: 717px) {
         margin-bottom: 16px; 
         @include font(40px, 110%, 500);
   }
@@ -321,15 +321,14 @@ a {
     text-align: center;
     padding: 80px 0;
 
-        @media (max-width: 402px) {
+        @media (max-width: 604px) {
         padding: 40px 0;
   }
-    
 
     &__text {
         line-height: 140%;
 
-            @media (max-width: 402px) {
+            @media (max-width: 604px) {
                 line-height: 100%;
   }
     }
@@ -352,11 +351,11 @@ a {
     .card {
         border: 1px solid rgba(255, 255, 255, 0.04);
         border-radius: 12px;
-        flex: 1 0 384px;
+        flex: 1 1 384px;
         padding: 36px 48px;
         background: linear-gradient(rgba(77, 77, 77, 0.1), rgba(179, 179, 179, 0.1));
 
-        @media (max-width: 402px) {
+        @media (max-width: 600px) {
             padding: 30px 24px;
             flex: auto;
         }
@@ -407,7 +406,7 @@ a {
         justify-content: center;
         gap: 72px;
 
-        @media (max-width: 402px){
+        @media (max-width: 717px){
             flex-direction: column;
             gap: 24px;
         }
@@ -527,10 +526,6 @@ a {
             padding: 40px;
     }
 
-    // .container {
-    //         padding: 0;
-    //     }
-
     .swiper {
         width: 100%;
         height: 196px;
@@ -643,9 +638,6 @@ a {
         }
     }
 
-
-
-
     &__link {
         display: inline-block;
         background-color: $green;
@@ -677,7 +669,7 @@ a {
         justify-content: space-between;
         flex-wrap: wrap;
 
-        @media (max-width: 402px) {
+        @media (max-width: 600px) {
             flex-direction: column;
             gap: 40px;
             align-items: center;
@@ -689,7 +681,7 @@ a {
         grid-template-columns: repeat(3, 1fr);
         gap: 92px;
 
-        @media (max-width: 402px) {
+        @media (max-width: 600px) {
             grid-template-columns: 1fr;
             gap: 50px;
         }
@@ -700,7 +692,7 @@ a {
 
             @include font(20px, 140%, 400);
 
-            @media (max-width: 402px) {
+            @media (max-width: 600px) {
                 margin-bottom: 12px;
                 text-align: center;
             }
@@ -709,7 +701,7 @@ a {
         &__item {
             text-align: left;
 
-            @media (max-width: 402px) {
+            @media (max-width: 600px) {
             text-align: center;
             }
 
