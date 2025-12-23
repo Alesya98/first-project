@@ -32,14 +32,9 @@ a {
 }
 
 .container {
-    max-width: 1440px;
-    padding: 0 120px;
+    max-width: 1240px;
+    padding: 0 20px;
     margin: 0 auto;
-
-    @media (max-width: 600px) {
-        max-width: 402px;
-        padding: 0 20px;
-  }
 }
 
 .subtitle {
@@ -61,28 +56,26 @@ a {
    
     color: $title;
       margin-bottom: 20px;
+
        @include font(48px, 100%, 400);
 
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
        margin-bottom: 16px;
+
        @include font(28px, 100%, 400);
   }
 }
 
 .text {
-
     max-width: 644px;
-        display: inline-block;
-        margin-bottom: 72px;
-       @include font(18px, 140%, 400);
-    margin-bottom: 32px;
+    display: inline-block;
+    margin-bottom: 72px;
     color: $text;
 
-    @include font(16px, 140%, 400);
+       @include font(18px, 140%, 400);
 
-    @media (max-width: 402px) {
+    @media (max-width: 767px) {
         margin-bottom: 32px;
-        color: $text;
 
     @include font(16px, 140%, 400);
   }
@@ -97,8 +90,8 @@ a {
         justify-content: space-between;
     } 
 
-     @media (max-width: 402px) {
-        padding: 20px;
+     @media (max-width: 767px) {
+        padding: 20px 0;
         max-width: 100%;
   }
 
@@ -111,7 +104,7 @@ a {
        &__link {
         color: $text;
         cursor: pointer;
-        transition: all 0.3 ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         @include font(16px, 100%, 400);
 
@@ -119,7 +112,7 @@ a {
             color: rgba(229, 229, 229, 1);
         }
     
-        @media (max-width: 925px) {
+        @media (max-width: 767px) {
             display: none;
         }
   }
@@ -147,7 +140,7 @@ a {
                 background-color: $green;
                 border-radius: 40px;
                 color: $body;
-                transition: background-color 0.3 ease-in-out;
+                transition: background-color 0.3s ease-in-out;
 
                 @include font(16px, 100%, 400);
 
@@ -156,14 +149,14 @@ a {
                 }
             }
 
-            @media (max-width: 925px) {
+            @media (max-width: 767px) {
                 display: none;
             }
     }
 
     &__open-mobile {
         display: none;
-     @media (max-width: 925px) {
+     @media (max-width: 767px) {
         display: block;
     }   
     }
@@ -172,40 +165,48 @@ a {
 
 .page {
     padding: 88px 0;
-    display: flex;
-    text-align: left;
-    flex-direction: row;
-    
 
-    @media (max-width: 900px) {
-        flex-wrap: wrap;
-        flex-direction: column;
+    @media (max-width: 767px) {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 32px;
+        }
     }
 
 
     &__img {
         object-fit: contain;
         width: 100%;
+        max-width: 512px;
+        max-height: 512px;
+
+        @media (max-width: 767px) {
+            max-width: 300px;
+            max-height: 300px;
+        }
     }
 
     .subtitle {
         margin-bottom: 24px;
     }
 
-    @media (max-width: 402px) {
-    padding: 40px 0;
-    text-align: center;
-  }
 
     &__info {
-        margin: 0;
-        padding: 69.5px 0;
         max-width: 688px;
         width: 100%;
         
-        @media (max-width: 402px) {
+        @media (max-width: 767px) {
         margin-bottom: 32px;
-        padding: 0;
   }
     }
 
@@ -214,7 +215,7 @@ a {
         @include font(64px, 110%, 700);
         color: $title;
 
-        @media (max-width: 717px) {
+        @media (max-width: 767px) {
         margin-bottom: 16px; 
         @include font(40px, 110%, 500);
   }
@@ -223,23 +224,22 @@ a {
     &__text {
         margin-bottom: 40px;
         max-width: 583px;
+
         @include font(20px, 140%, 400);
         color: $text;
 
-        @media (max-width: 402px) {
+        @media (max-width: 767px) {
         margin-bottom: 32px;
-        @include font(16, 100%, 400);
-
+        @include font(16px, 100%, 400);
   }
     }
 
     &__links {
         display: flex;
-        flex-direction: row;
         align-items: center;
         gap: 20px;
 
-        @media (max-width: 402px) {
+        @media (max-width: 767px) {
         flex-direction: column;
   }
     }
@@ -253,7 +253,7 @@ a {
         
         @include font(18px, 100%, 400);
 
-        @media (max-width: 1440px) {
+        @media (max-width: 767px) {
             @include font(16px, 100%, 400);
   }
 
@@ -274,7 +274,8 @@ a {
         
         @include font(18px, 100%, 400);
     
-        @media (max-width: 1440px) {
+        @media (max-width: 767px) {
+            flex-direction: row;
             padding: 16px 24px;
             @include font(16px, 100%, 400);       
        
@@ -287,10 +288,7 @@ a {
 
 .partners {
     background-color: $section;
-
-    .container {
-        padding: 40px 36px;
-    }
+    padding: 40px 0;
 
     &__title {
         margin-bottom: 40px;
@@ -299,7 +297,7 @@ a {
 
         @include font(16px, 100%, 400);
 
-            @media (max-width: 402px) {
+            @media (max-width: 767px) {
                 margin-bottom: 32px;
     }
     }
@@ -310,7 +308,7 @@ a {
         justify-content: center;
         gap: 72px;
 
-            @media (max-width: 1440px) {
+            @media (max-width: 767px) {
                 gap: 20px 16px;
   }
     }
@@ -321,29 +319,28 @@ a {
     text-align: center;
     padding: 80px 0;
 
-        @media (max-width: 604px) {
+        @media (max-width: 767px) {
         padding: 40px 0;
   }
 
     &__text {
         line-height: 140%;
 
-            @media (max-width: 604px) {
+            @media (max-width: 767px) {
                 line-height: 100%;
   }
     }
 
     &__cards {
         display: flex;
-        flex-direction: row;
         gap: 24px;
-        max-width: 1200px;
         align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         
 
-        @media (max-width: 402px) {
+        @media (max-width: 767px) {
             flex-direction: column;
+            flex-wrap: wrap;
             gap: 16px;
         }
     }
@@ -355,8 +352,9 @@ a {
         padding: 36px 48px;
         background: linear-gradient(rgba(77, 77, 77, 0.1), rgba(179, 179, 179, 0.1));
 
-        @media (max-width: 600px) {
+        @media (max-width: 767px) {
             padding: 30px 24px;
+            max-width: 362px;
             flex: auto;
         }
 
@@ -384,7 +382,7 @@ a {
     text-align: center;
     background-color: $section;
 
-    @media (max-width: 402px) {
+    @media (max-width: 767px) {
         padding: 40px 0;
     }
 
@@ -394,19 +392,18 @@ a {
         margin-bottom: 80px;
         
 
-        @media (max-width: 402px) {
+        @media (max-width: 767px) {
             font-size: 14px;
         }
     }
 
     &__info {
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 72px;
 
-        @media (max-width: 717px){
+        @media (max-width: 767px){
             flex-direction: column;
             gap: 24px;
         }
@@ -433,14 +430,14 @@ a {
     padding: 60px 0;
     text-align: center;  
 
-    @media (max-width: 402px) {
+    @media (max-width: 767px) {
         padding: 40px 0;
     }
 
     &__text {
             margin-bottom: 80px;
 
-            @media (max-width: 402px) {
+            @media (max-width: 767px) {
                 margin-bottom: 32px;
             }
         }
@@ -448,23 +445,21 @@ a {
         &__cards {
             display: flex;
             align-items: center;
-            flex-direction: row;
             gap: 72px;
 
-            @media (max-width: 900px) {
+            @media (max-width: 767px) {
                 flex-direction: column;
                 flex-wrap: wrap;
                 gap: 32px;
             }
         }
 
-    &__cards_img {
-            margin: 0;
+         &__img {
             object-fit: contain;
             max-width: 506px;
             width: 100%;
 
-        @media (max-width: 402px) {
+        @media (max-width: 767px) {
             max-width: 300px;
             width: 100%;
         }
@@ -474,7 +469,7 @@ a {
         display: grid;
         gap: 40px;
 
-        @media (max-width: 402px) {
+        @media (max-width: 767px) {
             gap: 16px;
         }
     }
@@ -482,34 +477,36 @@ a {
     &__card {
         border: 1px solid rgba(255, 255, 255, 0.04);
         border-radius: 20px;
-        padding: 24px 20px;
+        padding: 30px 20px;
         background: linear-gradient(rgba(77, 77, 77, 0.1), rgba(179, 179, 179, 0.1));
         text-align: left;
+        display: flex;
+        column-gap: 50px;
 
-        @media (max-width: 1440px) {
-            padding: 30px 20px;
+        @media (max-width: 767px) {
+            padding: 24px 20px;
+            column-gap: 20px;
         }
     }
 
     &__card svg {
-        position: absolute;
+        flex-shrink: 0;
     }
 
     &__info {
-        padding-left: 50px;
 
-        &_title {
+        &-title {
             margin-bottom: 8px;
             color: $title;
 
             @include font(20px, 140%, 400);
 
-            @media (max-width: 1440px) {
+            @media (max-width: 767px) {
             color: rgba(229, 229, 229, 1);
         }
         }
 
-        &_text {
+        &-text {
             color: $text;
 
             @include font(14px, 100%, 400);
@@ -522,15 +519,20 @@ a {
     text-align: center;
     background-color: $section;
 
-    @media (max-width: 402px) {
+    @media (max-width: 767px) {
             padding: 40px;
     }
 
     .swiper {
         width: 100%;
-        height: 196px;
         overflow: visible;
 
+        &__content img {
+            max-width: 48px;
+            max-height: 48px;
+            width: 100%;
+            object-fit: contain;
+        }
 
         .swiper-slide {
             background-color: $body;
@@ -552,20 +554,20 @@ a {
             display: flex;
             gap: 17px;
             align-items: center;
+    }
 
-        .name {
+      &__name {
             color: rgba(255, 255, 255, 1);
             margin-bottom: 6px;
 
             @include font(14px, 100%, 400);
         }
 
-        .quote {
+        &__quote {
             color: rgba(77, 77, 77, 1);
             
             @include font(12px, 100%, 400);
         }
-    }
     }
 }
 
@@ -573,11 +575,11 @@ a {
     padding: 80px 0;
     text-align: center;
 
-     @media (max-width: 402px) {
+     @media (max-width: 767px) {
         padding: 40px 0;
      }
 
-.accordoin {
+.accordion {
     max-width: 792px;
     width: 100%;
     display: inline-flex;
@@ -586,12 +588,11 @@ a {
     justify-content: center;
     gap: 30px;
 
-    @media (max-width: 402px) {
+    @media (max-width: 767px) {
         gap: 16px;
     }
-}
 
-    .accordion-item {
+    &__item {
         width: 100%;
         border: 1px solid rgba(46, 46, 46, 1);
         padding: 16px 20px;
@@ -601,12 +602,13 @@ a {
         cursor: pointer;
     }
 
-    .accordion-title {
+    &__title {
         color: $title;
         text-align: left;
         
         @include font(16px, 100%, 400)
     }
+}
 }
 
 .revolutionary {
@@ -614,12 +616,11 @@ a {
     text-align: center;
     background-color: $section;
 
-    @media (max-width: 402px) {
+    @media (max-width: 767px) {
         padding: 40px 0;
     }
     .container {
         max-width: 878px;
-        // padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -627,13 +628,13 @@ a {
     }
 
     &__title {
-        @media (max-width: 402px) {
+        @media (max-width: 767px) {
             @include font(28px, 100%, 400)
         }
     }
 
     &__text {
-        @media (max-width: 402px) {
+        @media (max-width: 767px) {
             @include font(16px, 140%, 400)
         }
     }
@@ -654,22 +655,21 @@ a {
 }
 
 .footer {
-    padding-top: 80px;
+    padding: 80px 0 40px 0;
+    text-align: center;
 
-    @media (max-width: 402px) {
+    @media (max-width: 767px) {
         padding-top: 40px;
     }
 
     &__wrap {
         margin-bottom: 40px;
-        padding: 40px 0;
         display: flex;
-        flex-direction: row;
         align-items: start;
         justify-content: space-between;
         flex-wrap: wrap;
 
-        @media (max-width: 600px) {
+        @media (max-width: 767px) {
             flex-direction: column;
             gap: 40px;
             align-items: center;
@@ -681,7 +681,7 @@ a {
         grid-template-columns: repeat(3, 1fr);
         gap: 92px;
 
-        @media (max-width: 600px) {
+        @media (max-width: 767px) {
             grid-template-columns: 1fr;
             gap: 50px;
         }
@@ -690,22 +690,27 @@ a {
             color: $title;
             text-align: left;
 
-            @include font(20px, 140%, 400);
-
-            @media (max-width: 600px) {
+            @media (max-width: 767px) {
                 margin-bottom: 12px;
                 text-align: center;
             }
         }
 
+        &__title {
+            margin-bottom: 24px;
+            color: $title;
+
+            @include font(20px, 140%, 400);
+        }
+
         &__item {
             text-align: left;
 
-            @media (max-width: 600px) {
+            @media (max-width: 767px) {
             text-align: center;
             }
 
-            &_link {
+            &-link {
             color: $text; 
             position: relative;
             transition: all 0.3s ease-in-out;
@@ -789,15 +794,7 @@ a {
         }
     }
 
-    &__bottom {
-        padding: 40px 0;
-        text-align: center;
-        @media (max-width: 402px) {
-            padding: 20px 0;
-        }
-    }
-
-    .bottom-text {
+        &__text {
         color: rgba(153, 153, 153, 1);
 
         @include font(12px, 100%, 400)
