@@ -35,7 +35,7 @@ a {
   line-height: 100%;
   font-weight: 400;
 }
-@media (max-width: 402px) {
+@media (max-width: 767px) {
   .subtitle {
     margin-bottom: 16px;
   }
@@ -119,7 +119,7 @@ a {
 .header__btn_login {
   padding: 10px 24px;
   color: rgb(255, 255, 255);
-  transition: background-color 0.3 ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   font-size: 16px;
   line-height: 100%;
   font-weight: 400;
@@ -340,9 +340,8 @@ a {
 }
 @media (max-width: 767px) {
   .features__cards {
-    flex-direction: column;
-    flex-wrap: wrap;
     gap: 16px;
+    align-items: stretch;
   }
 }
 .features .card {
@@ -354,7 +353,7 @@ a {
 }
 @media (max-width: 767px) {
   .features .card {
-    padding: 30px 24px;
+    padding: 20px;
     max-width: 362px;
     flex: auto;
   }
@@ -515,7 +514,7 @@ a {
 }
 @media (max-width: 767px) {
   .testimonial {
-    padding: 40px;
+    padding: 40px 0;
   }
 }
 .testimonial .swiper {
@@ -666,7 +665,7 @@ a {
 @media (max-width: 767px) {
   .footer__wrap {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
   }
 }
@@ -733,6 +732,11 @@ a {
 .footer .form {
   padding-bottom: 16px;
   position: relative;
+}
+@media (max-width: 767px) {
+  .footer .form {
+    width: 100%;
+  }
 }
 .footer .form::before {
   content: "";

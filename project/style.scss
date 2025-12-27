@@ -47,7 +47,7 @@ a {
 
     @include font(14px, 100%, 400);
 
-    @media (max-width: 402px) {
+    @media (max-width: 767px) {
        margin-bottom: 16px;
   }
 }
@@ -126,7 +126,7 @@ a {
             &_login {
                 padding: 10px 24px;
                 color: rgba(255, 255, 255, 1);
-                transition: background-color 0.3 ease-in-out;
+                transition: background-color 0.3s ease-in-out;
 
                 @include font(16px, 100%, 400);
 
@@ -339,9 +339,10 @@ a {
         
 
         @media (max-width: 767px) {
-            flex-direction: column;
-            flex-wrap: wrap;
+            // flex-direction: column;
+            // flex-wrap: wrap;
             gap: 16px;
+            align-items: stretch;
         }
     }
 
@@ -353,7 +354,8 @@ a {
         background: linear-gradient(rgba(77, 77, 77, 0.1), rgba(179, 179, 179, 0.1));
 
         @media (max-width: 767px) {
-            padding: 30px 24px;
+            // padding: 30px 24px;
+            padding: 20px;
             max-width: 362px;
             flex: auto;
         }
@@ -520,7 +522,7 @@ a {
     background-color: $section;
 
     @media (max-width: 767px) {
-            padding: 40px;
+            padding: 40px 0;
     }
 
     .swiper {
@@ -671,7 +673,7 @@ a {
 
         @media (max-width: 767px) {
             flex-direction: column;
-            gap: 40px;
+            gap: 30px;
             align-items: center;
         }
     }
@@ -743,6 +745,11 @@ a {
     .form {
             padding-bottom: 16px;
             position: relative;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+
         &::before {
             content: '';
             position: absolute;
